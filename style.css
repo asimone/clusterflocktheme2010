@@ -1,0 +1,565 @@
+/*
+Theme Name: clustertheme 2010
+Description: minimalist, clean theme for clusterflock.org. Based loosely on Clean Simple White Theme by Mazznoer (Clean Simple White Theme by Mazznoer). 
+Version: 1.0
+Author: Deron Bauman and Andrew Simone
+Author URI: http://clusterflock.org
+Tags: white, light, two-columns, right-sidebar, theme-options, fixed-width, sticky-post
+
+This theme is released under GPL: http://www.gnu.org/licenses/gpl.html
+
+If you remix, convert, translate, modify, or distribute a copy of this theme, please keep the links/credit in the footer.
+*/
+
+/* ----------------
+	Reset
+----------------------------------- */
+
+html, body, div, span, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, h7
+pre, form, fieldset, input, p, blockquote, th, td {margin:0;padding:0;border:0;outline:0;font-size:100%;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset, img {border:0;}
+address, caption, code, dfn, th, var, h1, h2, h3 {font-style:normal;}
+ol, ul {list-style:none;}
+caption, th {text-align:left;}
+q:before, q:after {content:'';}
+a img {border: none;}
+
+/* ---------------
+	Basic Elements
+---------------------------------- */
+
+body {
+background: #ffffff;
+color: 	#000000;
+font-family:"Helvetica";
+font-size: 0.8em;
+line-height: 22px;
+margin-left: auto;
+margin-right: auto;
+}
+
+a:link, a:visited {color: #E56717; text-decoration: none;}
+a:hover {background-color: #eee;}
+a:active {background-color: #eee;}
+
+
+h4 {font-family: "Helvetica"; font-weight: bold;}
+h1, h2, h3, {font-family: "Helvetica"; font-weight: 600;}
+h1 {font-size: 3.0em; line-height: 50px;}
+h1 a:link, h2 a:link {color: #000; text-decoration: none;}
+h1 a:visited, h2 a:visited {color: #000; text-decoration: none;}
+h1 a:hover, h2 a:hover {background-color: #eee; text-decoration: none;}
+h1 a:active, h2 a:active {background-color: #eee; text-decoration: none;}
+h2 {
+font-size: 1em;
+letter-spacing: .7px;
+line-height: 20px;
+}
+
+h2.archives {
+font-size: 1em;
+letter-spacing: .7px;
+line-height: 20px;
+margin-top: 25px;
+}
+
+h3 {font-size: 1.9em; line-height: 40px;}
+h4 {
+font-size: 1.4em;
+line-height: 40px;
+}
+
+h5 {
+font-size: 1em;
+font-family: "Helvetica";
+font-weight: bold;
+line-height: 0px;
+margin-top: 45px;
+}
+
+
+h6 {
+font-size: 1em;
+font-family: "Helvetica";
+font-weight: bold;
+line-height: 0px;
+}
+
+h7 {
+font-size: 1em;
+font-family: "Helvetica";
+font-weight: bold;
+}
+
+#main-content ul , #main-content ol {margin: 10px 0 10px 15px;}
+#main-content ul , #main-content ol {margin: 10px 0 10px 15px;}
+
+#main-content ul li {list-style-type:none;}
+
+#main-content ol li {list-style-type: decimal;}
+
+#main-content li li {margin-left: 25px;}
+#main-content p {margin: 15px 0; text-align: left; color:#000; font-size:0.8em;}
+
+
+#main-content .catcloud {
+font-size: 150%;
+line-height: 32px;
+	}
+
+
+#sidebar ul, #footer ul {margin-left: 0px;}
+#sidebar ul li, #footer ul li {
+border-bottom: 1px none #ccc;
+line-height: 20px;
+list-style-type: none;
+}
+
+#sidebar ul li a:link, #sidebar ul li a:visited,
+#footer ul li a:link, #footer ul li a:visited {color: #E56717;}
+#sidebar ul li a:hover, #footer ul li a:hover {background-color: #eee; text-decoration: none;}
+#sidebar h4 {font-size: 1.3em; letter-spacing: -1px; line-height: 50px; padding: 0px}
+
+
+input, textarea {background: #f5f5f5; border: 1px solid #bbb; color: #333; margin: 10px 0; padding: 7px 10px;}
+input#searchsubmimt, input#submit {background: #ddd; border: 1px solid #999; color: #555; padding: 6px 10px;}
+textarea#comment {width: 525px;}
+
+/* ---------------
+	Generic Classes
+---------------------------------- */
+
+.clear {clear: both;}
+.center {text-align: center;}
+.hidden {display: none;}
+.justify {text-align: justify;}
+.post-spt {border-top: 1px dashed #ccc; margin-bottom: 15px;}
+.post-meta {background: #fff; margin: -10px 0 45px; padding: 0px 0px; font-size: .9em; border-top:1px none #C0C0C0; width:515px;}
+.post-meta p {line-height: 22px}
+.post-tag {margin: 10px 0;}
+.sticky {background: #f6f6f6; border: 1px solid #ccc; margin: -10px -10px 10px -10px; padding: 0 10px;}
+.sticky .post-meta {border: 1px solid #bbb;}
+p.page-link span {border: 1px solid #ccc; padding: 3px 8px;}
+p.page-link a:hover {text-decoration: none;}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+/* ----------------
+	Basic Layout
+---------------------------------- */
+
+#wrapper {text-align: center;}
+#container {
+background: #ffffff;
+border-width: 0 0px;
+border-style: solid;
+border-color: #ddd;
+margin: 1px auto;
+text-align: left;
+width: 940px;
+}
+#header {padding: 20px;}
+#head-nav {margin: 0 10px; width: 680px;}
+#head-nav h2{font-size: 1.3em; letter-spacing: -1px; line-height: 50px;}
+#main-content {
+font-family: "Helvetica";
+font-size: 1.3em;
+float: left;
+margin: 10px;
+padding: 0px;
+width: 640px;
+background-color: #fff;
+}
+#sidebar {
+float: left;
+margin: -30px 0;
+padding: 0px 20px 20px 0;
+width: 185px;
+position: relative;
+top: -65px;
+right: -58px;
+font-family: "Helvetica";
+
+}
+#footer {padding: 10px 20px; position: relative; right: 10px;}
+#foot-1, #foot-2, #foot-3 {width: 290px; border: 0px solid #bbb;}
+#foot-1, #foot-2 {float: left;}
+#foot-right, #foot-3 {float: right;}
+#foot-2 {margin: 0 15px;}
+#footer-credit {line-height: 28px; margin: 10px 7px;}
+#footer-desc {border-top: 1px dotted #ccc; font-style: italic; text-align: right;}
+
+#ads {
+font-family: Helvetica;
+float: left;
+width: 123px;
+margin-left: 60px;
+position: relative;
+top: -75px;
+
+}
+
+
+
+/* ----------------
+	Head Nav
+---------------------------------- */
+
+ul#nav li {
+float: right;
+border-right: 2px solid #bbb;
+border-top: 1px none #bbb;
+border-bottom: 1px none #bbb;
+margin-bottom: 10px;
+position: relative;
+top: 40px;
+}
+
+ul#nav li a, ul#nav li a:link {
+color: #444;
+display: block;
+font-size: 1.0em;
+font-weight: bold;
+line-height: 30px;
+padding: 0 15px;
+}
+
+ul#nav li a, ul#nav li a:visited {
+color: #444;
+display: block;
+font-size: 1.0em;
+font-weight: bold;
+line-height: 30px;
+padding: 0 15px;
+}
+ul#nav li a:hover {background: #f2f2f2; text-decoration: none;}
+ul#nav li ul {display: none;}
+ul#nav li:hover ul {
+background: #f8f8f8;
+border: 1px solid #aaa;
+display: block;
+position: absolute;
+}
+
+ul#nav li ul li {
+border-bottom: 1px solid #ccc;
+border-right: 0;
+border-top: 0;
+float: none;
+margin-bottom: 0;
+}
+ul#nav li ul li a:link, ul#nav li ul li a:visited {
+font-family: Helvetica;
+font-size: 0.9em;
+font-weight: normal;
+line-height: 25px;
+margin: 4px;
+min-width: 122px;
+}
+ul#nav li ul li a:hover {background: #ffffff;}
+#head-nav ul#nav li ul li ul {display: none;}
+#head-nav ul#nav li ul li:hover ul {
+display: block;
+margin: -34px 0 0 160px;
+}
+
+
+/* ----------------
+	Page Nav and More Link
+---------------------------------- */
+
+.older a:link, .older a:visited {float: left;}
+.newer a:link, .newer a:visited {float: right;}
+.page-nav {margin-top: 10px;}
+
+a.more-link:link, a.more-link:visited {
+font-size: .9em;
+}
+
+/* ----------------
+	Miscelaneous
+---------------------------------- */
+
+
+blockquote {
+color: #bbbbbb;
+margin: 15px 0 18px 40px;
+padding-right: 50px;
+border-left: 2px solid #ccc;
+padding-left:10px;
+}
+
+div.twt-border blockquote {
+-webkit-margin-start: 0px !important;
+-webkit-margin-end: 0px !important;
+}
+
+code {color: #B03535;}
+pre, code {font-size: 1.3em; margin: 15px 0;}
+
+/* ----------------
+	Widget
+---------------------------------- */
+
+.widget {background: #fff; margin-left: -6px; position: relative; float: left; margin-right: -30px; padding: 7px; font-family: "Helvetica"; }
+.widget_author img {border: 1px solid #ccc; float: left; margin-right: 10px; padding: 5px;}
+.search-box {border: 1px solid #ccc; padding: 0 10px; text-align: center;}
+
+table#wp-calendar {text-align: center;}
+table#wp-calendar caption {font-size: 1.5em; margin-bottom: 10px; text-align: center;}
+table#wp-calendar thead tr th {background: #ffffff; border: 1px solid #ccc; font-weight: bold; padding: 4px 13px;}
+table#wp-calendar td {border: 1px solid #ccc; padding: 4px 13px;}
+#today {background: #ffffff;}
+
+a.follow:link, a.follow:visited {
+display: block;
+background: #ffffff;
+font-weight: bold;
+margin-top: 15px;
+padding: 5px 10px;
+text-align: center;
+}
+
+/* ----------------
+	Images and Captions
+---------------------------------- */
+
+img.centered {display: block; margin: 10px auto;}
+img.alignright {padding: 4px; margin: 0 0 2px 7px; display: inline;}
+img.alignleft {padding: 4px; margin: 0 7px 2px 0; display: inline;}
+
+.wp-caption {border: 1px solid #ccc; padding-top: 4px; text-align: center; margin: 10px;}
+.wp-caption img {margin: 0; padding: 0;}
+.wp-caption p.wp-caption-text {margin: 0; line-height: 17px;}
+
+/* ---------------
+	Comment List
+---------------------------------- */
+#main-content ol.commentlist {margin-left: 0px;}
+#main-content ol.commentlist li {
+list-style: none;
+
+padding: 0px;
+}
+#main-content commentlist p {
+margin: 15px
+}
+
+#commentblock {
+	margin-top: 60px;
+	}
+
+#commentblock2 {
+	margin-top: 45px;
+	}
+	
+.commenttext {
+	margin-top:-15px;
+	width: 533px;
+	}
+
+li.odd {background: #f8f8f8;}
+.commentlist li img.avatar {border: 1px solid #aaa; width: 32px; height: 32px;}
+#main-content ul.children li {margin-left: 70px;}
+.comment-author {background: #ffffff;}
+.comment-meta {border-bottom: 1px none #ddd; text-align: left; font-size: .em;}
+.comment-reply-link, #cancel-comment-reply-link {border: 1px solid #aaa; padding: 3px 10px;}
+
+.date-header
+{
+   margin-top: 25px;
+   margin-bottom: 30px;
+   text-transform: uppercase;
+	font: bold 14px "Helvetica";
+	border-top: 3px none #58554a;
+	padding-top: 5px;
+	color: #000;
+}
+
+
+.page-title
+{
+   margin-top: 15px;
+   margin-bottom: 25px;
+	font: bold 14px "Helvetica";
+	border-top: 3px none #58554a;
+	padding-top: 5px;
+	color: #000;
+}
+
+ul#nav li#menu-item-48644 {
+border-right: 1px none #BBBBBB;
+}
+
+
+/************************************************
+*	Styles for India's dynamic category page	*
+************************************************/
+
+#main-content ul.categorylist {
+	padding:0px;
+	margin:20px 0 0 0;
+	list-style-type:none;
+}
+
+#main-content ul.categorylist li.cat-item {
+	display:inline;
+	color:#58554A;
+	font-family:Georgia,Helvetica,Sans-Serif;
+	line-height:2.1em;
+	margin-left:0px; 
+	margin-right:0.2em;
+	font-size:1.2em;
+	}
+
+#main-content ul.categorylist li.cat-item a, #contentleft ul.categorylist li.cat-item a:visited {
+	font-size:1.4em;
+	}
+	
+#main-content ul.categorylist li.cat-item a:hover {
+	font-size:1.4em;
+	}
+
+#main-content ul.categorylist li.cat-item:after {
+	content: "\00A0 \2022\00A0 ";
+	}
+	
+#main-content ul.categorylist > li.cat-item:last-child::after {
+	content: "";
+	}
+/************************************************
+*	Styles for India's dynamic category page	*
+************************************************/
+
+#main-content ul.categorylist {
+	padding:0px;
+	margin:20px 0 0 0;
+	list-style-type:none;
+}
+
+#main-content ul.categorylist li.cat-item {
+	display:inline;
+	color:#58554A;
+	font-family:Georgia,Helvetica,Sans-Serif;
+	line-height:2.1em;
+	margin-left:0px; 
+	margin-right:0.2em;
+	font-size:1.2em;
+	}
+
+#main-content ul.categorylist li.cat-item a, #contentleft ul.categorylist li.cat-item a:visited {
+	font-size:1.4em;
+	}
+	
+#main-content ul.categorylist li.cat-item a:hover {
+	font-size:1.4em;
+	}
+
+#main-content ul.categorylist li.cat-item:after {
+	content: "\00A0 \2022\00A0 ";
+	}
+	
+#main-content ul.categorylist > li.cat-item:last-child::after {
+	content: "";
+	}
+/************************************************
+*	Styles for India's dynamic category page	*
+************************************************/
+
+#main-content ul.categorylist {
+	padding:0px;
+	margin:20px 0 0 0;
+	list-style-type:none;
+}
+
+#main-content ul.categorylist li.cat-item {
+	display:inline;
+	color:#58554A;
+	font-family:Helvetica;
+	line-height:2.1em;
+	margin-left:0px; 
+	margin-right:0.2em;
+	font-size:.8em;
+	}
+
+#main-content ul.categorylist li.cat-item a, #main-content ul.categorylist li.cat-item a:visited {
+	font-size:1.4em;
+	}
+	
+#main-content ul.categorylist li.cat-item a:hover {
+	font-size:1.4em;
+	}
+
+#main-content ul.categorylist li.cat-item:after {
+	content: "\00A0 \2022\00A0 ";
+	}
+	
+#main-content ul.categorylist > li.cat-item:last-child::after {
+	content: "";
+	}
+
+/************************************************
+*	Styles for flockers page		*
+************************************************/
+
+#main-content ul.categorylist2 {
+	padding:0px;
+	margin:20px 0 0 0;
+	list-style-type:none;
+}
+
+#main-content ul.categorylist2 li {
+	display:inline;
+	color:#58554A;
+	font-family:Helvetica;
+	line-height:2.1em;
+	margin-left:0px; 
+	margin-right:0.2em;
+	font-size:.8em;
+	}
+
+#main-content ul.categorylist2 li a, #main-content ul.categorylist2 li a:visited {
+	font-size:1.4em;
+	}
+	
+#main-content ul.categorylist2 li a:hover {
+	font-size:1.4em;
+	}
+
+#main-content ul.categorylist2 li:after {
+	content: "\00A0 \2022\00A0 ";
+	}
+	
+#main-content ul.categorylist2 > li:last-child::after {
+	content: "";
+	}
+
+#respond {
+margin-top: 70px;
+}
+
+img#wpstats{display:none}
+
+.commenttext ol li, .commenttext ul li {
+font-family:Helvetica,"Helvetica Neue",sans-serif;
+font-size:13px;
+line-height:18px;
+}
+.commenttext ul li {
+list-style-type: disc outside !important;
+}
+.commenttext ol li {
+list-style: decimal outside !important;
+}
