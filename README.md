@@ -15,7 +15,7 @@ INSTALL:
 2. Go to Admin WordPress and select presentation.
 3. Select Clusterflock theme
 
-Questions, bugs and others can be emailed me to andrew.simone@gmail.com.
+Questions, bugs and others can be emailed me to me@andrewsimone.com
 
 Andrew Simone
 andrewsimone.com
