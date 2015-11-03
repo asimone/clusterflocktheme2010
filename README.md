@@ -16,6 +16,3 @@ INSTALL:
 3. Select Clusterflock theme
 
 Questions, bugs and others can be emailed me to me@andrewsimone.com
-
-Andrew Simone
-andrewsimone.com
